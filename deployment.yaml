@@ -17,7 +17,7 @@ spec:
     spec: 
       containers: 
         - name: myusers-app
-          image: gcr.io/qwiklabs-gcp-03-188f034d56f1/myusers-app:latest
+          image: gcr.io/qwiklabs-gcp-01-9ae55238d974/myusers-app:latest
           imagePullPolicy: Always
           ports: 
             - containerPort: 8080
