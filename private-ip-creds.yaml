@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: ip-credentials
 data:
- db_host: 10.23.16.3
+ db_host: 10.63.112.3

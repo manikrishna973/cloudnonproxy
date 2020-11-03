@@ -17,7 +17,7 @@ spec:
     spec: 
       containers: 
         - name: myusers-app
-          image: gcr.io/qwiklabs-gcp-03-188f034d56f1/myusers-app:latest
+          image: gcr.io/qwiklabs-gcp-01-9ae55238d974/myusers-app:v3
           imagePullPolicy: Always
           ports: 
             - containerPort: 8080
@@ -39,31 +39,8 @@ spec:
                   key: connection-name
             - name: DB_HOST
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef: 
                   name: ip-credentials
                   key: db_host
-           # - name: PROFILE
-              #valueFrom:
-                #configMapKeyRef:
-                  #name: mysqldb
-                  #key: profile                            
-        
-#---
-#kind: ConfigMap 
-#apiVersion: v1 
-#metadata:
-#  name: elastic-app 
-#data:
-#  database: marketplace
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: myusers-app
-spec:
-  selector:
-    app: myusers-app
-  ports:
-    - port: 8080
-      targetPort: 8080
-  type: LoadBalancer
+                  
+

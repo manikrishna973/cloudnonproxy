@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: mysqldb
 data:
-  connection-name: mydb1
+  connection-name: studsdevdata
   #project-id: qwiklabs-gcp-02-563c2ddcb40b
   #profile: staging
