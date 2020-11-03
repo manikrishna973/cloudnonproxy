@@ -25,12 +25,12 @@ spec:
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: cloudsql-user-credentials
+                  name: cloudsql-user
                   key: username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: cloudsql-user-credentials
+                  name: cloudsql-user
                   key: password
             - name: DB_NAME
               valueFrom:
@@ -42,5 +42,3 @@ spec:
                 configMapKeyRef: 
                   name: ip-credentials
                   key: db_host
-                  
-
